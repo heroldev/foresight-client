@@ -15,7 +15,7 @@ const ProfilePicSelector = (props: IProfilePicSelectorProps) => {
 
   const { labelText, formData } = props;
 
-  const [avatar, setAvatar] = useState('/pub_img/pfp_icon/hilbert.png')
+  const [avatar, setAvatar] = useState(hilbertPfp)
 
   const handleAvatarChoose = (event: any) => {
     setAvatar(event.target.value)
