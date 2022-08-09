@@ -19,6 +19,20 @@ import { checkCardAmountInDeck } from '../../util/checkCardAmountInDeck'
 import PulseDot from 'react-pulse-dot'
 import CardActionArea from '@mui/material/CardActionArea'
 
+import abilityIcon from "/pub_img/card/ability.png"
+
+import colorlessIcon from "/pub_img/card/types/colorless_tcg.png"
+import metalIcon from "/pub_img/card/types/metal_tcg.png"
+import darknessIcon from '/pub_img/card/types/darkness_tcg.png'
+import dragonIcon from '/pub_img/card/types/dragon_tcg.png'
+import fairyIcon from '/pub_img/card/types/fairy_tcg.png'
+import fightingIcon from '/pub_img/card/types/fighting_tcg.png'
+import fireIcon from '/pub_img/card/types/fire_tcg.png'
+import grassIcon from '/pub_img/card/types/grass_tcg.png'
+import lightningIcon from '/pub_img/card/types/lightning_tcg.png'
+import psychicIcon from '/pub_img/card/types/psychic_tcg.png'
+import waterIcon from '/pub_img/card/types/water_tcg.png'
+
 const topCardControlsStyle = css`
 display: flex;
 align-content: center;
@@ -108,12 +122,33 @@ const CardView = (props: ICardViewProps) => {
     setShowAttacks(!showAttacks)
   }
 
-  const generateShownTypes = (card: Card) => {
-    return
-  }
-
-  const parseAttacks = (attacks: Attack[]) => {
-
+  const getTypeToShow = (type: string) => {
+    switch (type) {
+      case "metal":
+        return metalIcon
+      case "darkness":
+        return darknessIcon
+      case "dragon":
+        return dragonIcon
+      case "fairy":
+        return fairyIcon
+      case "fighting":
+        return fightingIcon
+      case "fire":
+        return fireIcon
+      case "grass":
+        return grassIcon
+      case "lightning":
+        return lightningIcon
+      case "psychic":
+        return psychicIcon
+      case "water":
+        return waterIcon
+      case "colorless":
+        return colorlessIcon
+      default:
+        return colorlessIcon
+    }
   }
 
   return (
@@ -129,8 +164,6 @@ const CardView = (props: ICardViewProps) => {
               {card.name}
             </Typography>
             <Box className={topCardControlsStyle}>
-
-
               <Tooltip title={showCardView ? "Hide Card Preview" : "Show Card Preview"} placement={'top'}>
                 <IconButton onClick={handleShowCardView}>
                   {showCardView ?
@@ -147,7 +180,7 @@ const CardView = (props: ICardViewProps) => {
               component="img"
               height="550"
               image={card.images.large}
-              sx={{pb: 2}}
+              sx={{ pb: 2 }}
               alt={card.name}
             />
           }
@@ -175,7 +208,7 @@ const CardView = (props: ICardViewProps) => {
                 {card.retreatCost &&
                   card.retreatCost?.map((type, index) => {
                     return (
-                      <img style={{ paddingRight: "8px" }} src={"/pub_img/card/types/colorless_tcg.png"} alt={"colorless"} height="24px" ></img>
+                      <img style={{ paddingRight: "8px" }} src={colorlessIcon} alt={"colorless"} height="24px" ></img>
                     )
                   })
                 }
@@ -219,7 +252,7 @@ const CardView = (props: ICardViewProps) => {
                         card.types?.map((type, index) => {
                           return (
                             <Tooltip title={type} placement='top' key={index}>
-                              <img style={{ paddingRight: "8px" }} src={"/pub_img/card/types/" + type.toLowerCase() + "_tcg.png"} alt={type} height="24px" ></img>
+                              <img style={{ paddingRight: "8px" }} src={getTypeToShow(type.toLowerCase())} alt={type} height="24px" ></img>
                             </Tooltip>
                           )
                         })
@@ -259,7 +292,7 @@ const CardView = (props: ICardViewProps) => {
                               <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
                                 <Box sx={{ pl: 2, display: "flex" }}>
                                   <Tooltip title={ability.type} placement='top' key={index}>
-                                    <img style={{ paddingRight: "8px" }} src={"/pub_img/card/ability.png"} alt={ability.type} height="24px" ></img>
+                                    <img style={{ paddingRight: "8px" }} src={abilityIcon} alt={ability.type} height="24px" ></img>
                                   </Tooltip>
                                   <Typography variant="body1" style={{ fontWeight: 700, color: "#9f191d" }} component="div" sx={{ pl: 1, pr: 2, pb: 1 }}>
                                     {ability.name}
@@ -286,7 +319,7 @@ const CardView = (props: ICardViewProps) => {
                                     attack.cost?.map((type, index) => {
                                       return (
                                         <Tooltip title={type} placement='top' key={index}>
-                                          <img style={{ paddingRight: "8px" }} src={"/pub_img/card/types/" + type.toLowerCase() + "_tcg.png"} alt={type} height="24px" ></img>
+                                          <img style={{ paddingRight: "8px" }} src={getTypeToShow(type.toLowerCase())} alt={type} height="24px" ></img>
                                         </Tooltip>
                                       )
                                     })
@@ -326,7 +359,7 @@ const CardView = (props: ICardViewProps) => {
                           return (
                             <div style={{ display: "flex", flexDirection: "row" }}>
                               <Tooltip title={weakness.type} placement='top' key={index}>
-                                <img style={{ paddingRight: "8px" }} src={"/pub_img/card/types/" + weakness.type.toLowerCase() + "_tcg.png"} alt={weakness.type} height="24px" ></img>
+                                <img style={{ paddingRight: "8px" }} src={getTypeToShow(weakness.type.toLowerCase())} alt={weakness.type} height="24px" ></img>
                               </Tooltip>
                               <Typography gutterBottom variant="body1" component="div" sx={{ pb: 1 }}>
                                 {weakness.value}
@@ -348,7 +381,7 @@ const CardView = (props: ICardViewProps) => {
                               return (
                                 <div style={{ display: "flex", flexDirection: "row" }}>
                                   <Tooltip title={resistance.type} placement='top' key={index}>
-                                    <img style={{ paddingRight: "8px" }} src={"/pub_img/card/types/" + resistance.type.toLowerCase() + "_tcg.png"} alt={resistance.type} height="24px" ></img>
+                                    <img style={{ paddingRight: "8px" }} src={getTypeToShow(resistance.type.toLowerCase())} alt={resistance.type} height="24px" ></img>
                                   </Tooltip>
                                   <Typography gutterBottom variant="body1" component="div" sx={{ pb: 1 }}>
                                     {resistance.value}
@@ -411,7 +444,7 @@ const CardView = (props: ICardViewProps) => {
                   card.types?.map((type, index) => {
                     return (
                       <Tooltip title={type} placement='top' key={index}>
-                        <img style={{ paddingRight: "8px" }} src={"/pub_img/card/types/" + type.toLowerCase() + "_tcg.png"} alt={type} height="24px" ></img>
+                        <img style={{ paddingRight: "8px" }} src={getTypeToShow(type.toLowerCase() + "_tcg.pn)} height="24px" ></img>
                       </Tooltip>
                     )
                   })

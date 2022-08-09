@@ -132,11 +132,10 @@ export default function CardList(props: ICardListProps) {
 
   const checkDeckLegality = (): boolean => {
     // comment out this first condition
-    /*
+    
     if (stateDeck.decklist.length !== 60) {
       return false
     }
-    */
 
     //  check if deck has at least a singular basic pokemon
     let deckHasBasicPokemon = false

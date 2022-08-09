@@ -31,6 +31,8 @@ import Select, { SelectChangeEvent } from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
 import { DeckFormat } from '../../types/Format'
 
+import cardback from '/pub_img/card/cardback.jpg'
+
 const editDeckDetailsForm = css`
   display: flex;
   align-items: center;
@@ -74,7 +76,7 @@ const CreateEditDeck = () => {
       unlimited: "Legal"
     },
     images: {
-      large: '/pub_img/card/cardback.jpg'
+      large: cardback
     },
     set: {
       name: "Pokémon TCG",
