@@ -1,0 +1,11 @@
+.foresight-main-header {
+
+  background: #FFFFFF;
+  font-size: 18;
+  height: 90px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}

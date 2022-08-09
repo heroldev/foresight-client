@@ -1,0 +1,21 @@
+.avatar-viewer-container {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-viewer-pfp-outline {
+  background-color: #c4c4c4;
+  width:250px;
+  height:250px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-viewer-pfp {
+  background-color: #c4c4c4;
+  width:220px;
+  height:220px;
+  border-radius: 50%;
+}

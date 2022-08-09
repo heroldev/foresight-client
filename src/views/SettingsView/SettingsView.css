@@ -1,0 +1,17 @@
+.settings-content-container {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-username-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foresight-username-text {
+  font-family: Roboto;
+  font-size: 18pt;
+  color: #6a6a6a;
+}

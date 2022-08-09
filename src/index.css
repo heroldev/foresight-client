@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e5e5e5;
+}
+
+@font-face {
+  font-family: 'UDKakugo_SmallDB';
+  src: url(/fonts/FOT-UDKakugo_SmallPr6-DB.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'UDKakugo_SmallM';
+  src: url(/fonts/FOT-UDKakugo_SmallPr6-M.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'UDKakugo_SmallB';
+  src: url(/fonts/FOT-UDKakugo_SmallPr6N-B.otf) format('opentype');
+}
+

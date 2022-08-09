@@ -1,0 +1,20 @@
+.avatar-chooser-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.avatar-label-select {
+  display: flex;
+  flex-direction: column;
+}
+
+.foresight-avatar-label-text {
+  font-family: UDKakugo_SmallDB;
+  font-size: 18pt;
+  color: #6a6a6a;
+  padding-top: 0px;
+  padding-bottom: 11px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
