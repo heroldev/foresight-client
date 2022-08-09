@@ -17,8 +17,8 @@ This app is being developed out of my love for the Pokémon games and the franch
 I've always wanted a an app that serves as a quick reference for all of my TCG decks. Seeing no resouce that provides this similar suite of functionality, Foresight's end goal is to be able to do it all (and maybe more.)
 
 ## Building and Execution
-- Foresight's frontend (stored in `/client`) uses `create-react-app`. Run the necessary npm scripts to get it up and running.
-- Foresight's backend (stored in `/server`) uses Go to field requests. Test the server using `go run main.go` after running `go mod tidy`. **As Foresight currently uses local storage, the server functionality serves no purpose in deployment.**
+- Foresight's frontend (stored in `foresight-client`) uses `create-react-app`. Run the necessary npm scripts to get it up and running.
+- Foresight's backend (stored in `foresight-server`) uses Go to field requests. Test the server using `go run main.go` after running `go mod tidy`. **As Foresight currently uses local storage, the server functionality serves no purpose in deployment.**
 
 ## Special Thanks
 - Sprites are retrieved from https://msikma.github.io/pokesprite/.
