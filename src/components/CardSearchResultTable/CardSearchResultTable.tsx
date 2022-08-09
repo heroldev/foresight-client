@@ -90,7 +90,7 @@ export default function CardSearchResultTable(props: ICardSearchResultTableProps
 
     let tableItems: Data[] = []
 
-    resultList.forEach(card => tableItems.push(createData(card.name, (card.subtypes?.join(', ') || ''), card.supertype, card.set.images.symbol, card.id, card)))
+    resultList.forEach(card => tableItems.push(createData(card.name, (card.subtypes?.join(', ') || ''), card.supertype, card.set!.images.symbol, card.id, card)))
 
     return tableItems
   }
@@ -137,7 +137,7 @@ export default function CardSearchResultTable(props: ICardSearchResultTableProps
                             <TableCell key={column.id} align={column.align} onClick={() => handleCardResultClick(row.card)}>
                               {column.format === 'image'
                                 ?
-                                <Tooltip title={row.card.set.name} placement='left'>
+                                <Tooltip title={row.card.set!.name} placement='left'>
                                   <img src={row.symbol} alt="Symbol" height="35" ></img>
                                 </Tooltip>
                                 : value}

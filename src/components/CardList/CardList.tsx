@@ -127,7 +127,6 @@ export default function CardList(props: ICardListProps) {
   }
 
   const handleCardClick = (card: Card) => {
-    console.log(card)
     onSelect(card)
   }
 

@@ -79,7 +79,7 @@ const CardView = (props: ICardViewProps) => {
   }
 
   const disableRemoveCard = (): boolean => {
-    if (stateDeck.cardCount.get(card.id) <= 0 || stateDeck.cardCount.get(card.id) == undefined) {
+    if (stateDeck.cardCount.get(card.id)! <= 0 || stateDeck.cardCount.get(card.id) == undefined) {
       return true
     } else {
       return false

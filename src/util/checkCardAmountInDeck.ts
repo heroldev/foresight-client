@@ -12,9 +12,9 @@ export const checkCardAmountInDeck = (card: Card, stateDeck: Deck): boolean => {
 
   if (card.id === "foresight_card_filler_cardback") {
     return true
-  } else if (stateDeck.cardCount.get(card.id) >= 4 && card.supertype !== "Energy" ) {
+  } else if (stateDeck.cardCount.get(card.id)! >= 4 && card.supertype !== "Energy" ) {
     return true
-  } else if (stateDeck.cardCount.get(card.id) >= 4 ) {
+  } else if (stateDeck.cardCount.get(card.id)! >= 4 ) {
     // Special Energy rule: cannot have more than 4
     return true
   } else {

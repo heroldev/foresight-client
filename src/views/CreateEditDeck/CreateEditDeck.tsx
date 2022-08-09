@@ -114,7 +114,6 @@ const CreateEditDeck = () => {
     setSaveTextClass(fadeSaveTextIn)
     updateDeckModified(new Date().toLocaleString())
     savePkmnDeck()
-    console.log(stateDeck)
   }
 
   const handleChangeStateDeckFormat = (event: SelectChangeEvent) => {

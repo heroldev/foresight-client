@@ -42,7 +42,7 @@ const ProtectedRoute = (props: ProtectedRouteProps) => {
                  */
             return (
                 <Route {...props} component={undefined} render={undefined}>
-                    <Login redirectURL={props.location?.pathname} register={false} />
+                    <Login redirectURL={props.location?.pathname} />
                 </Route>
             );
         } else {
