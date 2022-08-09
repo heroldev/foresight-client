@@ -4,12 +4,12 @@ import AvatarViewer from "../AvatarViewer/AvatarViewer";
 import "./ProfilePicSelector.css"
 import { IProfilePicSelectorProps } from "./types";
 
-import hilbertPfp from './pub_img/pfp_icon/hilbert.png'
-import hildaPfp from './pub_img/pfp_icon/hilda.png'
-import stevenPfp from './pub_img/pfp_icon/steven_oras.png'
-import lyraPfp from './pub_img/pfp_icon/lyra_hgss.png'
-import ethanPfp from './pub_img/pfp_icon/ethan_hgss.png'
-import lucasPfp from './pub_img/pfp_icon/lucas_pt.png'
+import hilbertPfp from '/pub_img/pfp_icon/hilbert.png'
+import hildaPfp from '/pub_img/pfp_icon/hilda.png'
+import stevenPfp from '/pub_img/pfp_icon/steven_oras.png'
+import lyraPfp from '/pub_img/pfp_icon/lyra_hgss.png'
+import ethanPfp from '/pub_img/pfp_icon/ethan_hgss.png'
+import lucasPfp from '/pub_img/pfp_icon/lucas_pt.png'
 
 const ProfilePicSelector = (props: IProfilePicSelectorProps) => {
 
