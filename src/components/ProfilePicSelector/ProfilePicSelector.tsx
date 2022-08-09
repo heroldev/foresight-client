@@ -4,6 +4,13 @@ import AvatarViewer from "../AvatarViewer/AvatarViewer";
 import "./ProfilePicSelector.css"
 import { IProfilePicSelectorProps } from "./types";
 
+import hilbertPfp from './pub_img/pfp_icon/hilbert.png'
+import hildaPfp from './pub_img/pfp_icon/hilda.png'
+import stevenPfp from './pub_img/pfp_icon/steven_oras.png'
+import lyraPfp from './pub_img/pfp_icon/lyra_hgss.png'
+import ethanPfp from './pub_img/pfp_icon/ethan_hgss.png'
+import lucasPfp from './pub_img/pfp_icon/lucas_pt.png'
+
 const ProfilePicSelector = (props: IProfilePicSelectorProps) => {
 
   const { labelText, formData } = props;
@@ -16,15 +23,15 @@ const ProfilePicSelector = (props: IProfilePicSelectorProps) => {
   }
 
   const avatarIcons = new Map([
-    ["Hilbert (BW)", '/pub_img/pfp_icon/hilbert.png'],
-    ["Hilda (BW)", '/pub_img/pfp_icon/hilda.png'],
-    ["Steven (ORAS)", '/pub_img/pfp_icon/steven_oras.png'],
-    ["Lyra (HGSS)", '/pub_img/pfp_icon/lyra_hgss.png'],
-    ["Ethan (HGSS)", '/pub_img/pfp_icon/ethan_hgss.png'],
+    ["Hilbert (BW)", hilbertPfp],
+    ["Hilda (BW)", hildaPfp],
+    ["Steven (ORAS)", stevenPfp],
+    ["Lyra (HGSS)", lyraPfp],
+    ["Ethan (HGSS)", ethanPfp],
     /*
     ["Dawn (PT)", '/pfp_icon/dawn_pt.png'],
     */
-    ["Lucas (PT)", '/pub_img/pfp_icon/lucas_pt.png'],
+    ["Lucas (PT)", lucasPfp],
   ]);
 
   const getAvatarKeys = () => {
