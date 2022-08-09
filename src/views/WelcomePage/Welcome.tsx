@@ -87,7 +87,7 @@ const Welcome = () => {
               <u>disclaimer</u>
             </Button>
           </div>
-          <span style={{fontSize: "12pt"}} className="foresight-login-light-text">
+          <span style={{fontSize: "12pt", paddingTop: "10px"}} className="foresight-login-light-text">
             version {import.meta.env.VITE_CLIENT_VERSION}
           </span>
         </div>
