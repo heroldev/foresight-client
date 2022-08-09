@@ -312,9 +312,11 @@ const CreateEditDeck = () => {
                       <Button variant="contained" style={{ backgroundColor: '#1C18E8', marginRight: "16px" }} onClick={handleSaveDeck} size={"medium"}>
                         Save Deck
                       </Button>
-                      <Button variant="contained" style={{ marginRight: "16px" }} onClick={handleSaveDeck} size={"medium"}>
+                      {/*
+<Button variant="contained" style={{ marginRight: "16px" }} onClick={handleSaveDeck} size={"medium"}>
                         Draw Simulator
                       </Button>
+                */}
                       <p className={saveTextClass + " customCaption"} style={{ padding: 0, margin: 0, userSelect: "none", color: "#1C18E8" }}><strong>{stateDeck.name} saved!</strong></p>
                     </Box>
                   </CardContent>
