@@ -20,6 +20,7 @@ const ProfilePicSelector = (props: IProfilePicSelectorProps) => {
   const handleAvatarChoose = (event: any) => {
     setAvatar(event.target.value)
     formData.avatar = event.target.value;
+    console.log(event.target.value)
   }
 
   const avatarIcons = new Map([

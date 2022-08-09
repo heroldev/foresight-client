@@ -10,6 +10,8 @@ import { saveData, useStore } from "../../state/store";
 import User from "../../types/User";
 import ProfilePicSelector from "../../components/ProfilePicSelector/ProfilePicSelector";
 
+import hilbertPfp from '/pub_img/pfp_icon/hilbert.png'
+
 const LoginPage = (props: ILoginProps) => {
 
   const setUserData = useStore(state => state.setUserData)
@@ -17,7 +19,7 @@ const LoginPage = (props: ILoginProps) => {
 
   let formData = useRef({
     username: '',
-    avatar: '/pfp_icon/hilbert.png'
+    avatar: hilbertPfp
   });
 
   const handleCreateUser = () => {
